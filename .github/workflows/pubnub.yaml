@@ -2,16 +2,19 @@ name: Reset PubNub Module Every Friday
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Run every Friday at 12:00am UTC
+    - cron: '*/5 * * * *' 
 
 jobs:
   reset-module:
-    runs-on: ubuntu-latest
+    runs-on: 
+      - master
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Install dependencies
       run: npm install
+    - name: checkout pubnub
+      uses: pubnub/github-action@v1.0.0
     - name: Reset PubNub Module
       env:
         PUBNUB_USERNAME: ${{ secrets.PUBNUB_USERNAME }}
