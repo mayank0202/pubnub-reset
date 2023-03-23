@@ -2,7 +2,7 @@ name: Reset PubNub Module Every Friday
 
 on:
   schedule:
-    - cron: '*/5 * * * *' 
+    - cron: '*/1 * * * *' 
 
 jobs:
   reset-module:
