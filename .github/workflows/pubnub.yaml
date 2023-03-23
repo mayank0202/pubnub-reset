@@ -7,7 +7,10 @@ on:
 jobs:
   reset-module:
     runs-on: 
-      - master
+      - self-hosted
+      - linux
+      - macos
+      - windows
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
