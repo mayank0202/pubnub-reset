@@ -28,5 +28,4 @@ jobs:
       run: |
         pubnub whoami
         pubnub list-accounts
-        pubnub list-apps
         pubnub list-modules
